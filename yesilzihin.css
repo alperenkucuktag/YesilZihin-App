@@ -1,0 +1,439 @@
+
+/* Yazı Fontu Ekleme */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+ *{    /*Evrensel header gibi */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+.navbar{
+    
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin:20px auto;/*Yukardan ve aşağıdan 20px,sağdan ve soldan 20px boşluk */
+    padding: 20px 0px;
+}
+.navbar-left{
+   
+     display: flex;/*Esnek Olarak Yatay Hale getirir */
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+
+}
+.navbar-left-logo{
+   
+    font-family: 'Indie Flower', cursive;
+    text-decoration: none;
+     line-height: 64px;/*Satır Yüksekliği */
+    font-size:44px;
+    color: rgb(4, 99, 4);
+}
+.navbar-left-logo:hover{
+   transform: scale(1.1);
+   transition: ease 0.5s;
+   
+}
+.navbar-left-menu{
+    
+    display: flex;
+    gap: 20px;
+    align-items: center;    
+}
+.navbar-left-menu a{
+    text-decoration: none;
+    font-size: 18px;
+    color: gray;
+}
+.navbar-left-menu a:first-child:hover{
+    color: black;
+    font-weight: bold;
+    
+}
+.navbar-left-menu a:hover{
+    color: green;
+
+}
+.navbar-right{
+   
+    display: flex;
+    flex-direction:row;
+    gap:20px;
+    align-items: center;
+}
+.navbar-right i{
+    cursor: pointer;
+    font-size: 22px;
+}
+.navbar-right i:hover{
+    color: gray;
+    transform: scale(1.5);
+    transition: ease 0.5s;
+}
+.banner{
+   
+    display: flex;
+    width: 90%;
+    margin:auto;  /* saat yönünde ilerler örn:Yukardan,sağdan,alttan,soldan(top,right,buttom,left)*/
+    border-radius: 20px;
+    background-color: rgb(157, 218, 198);
+}
+.banner-left{
+    
+    display: flex;
+    flex-direction: column;
+    width:50%;
+    gap: 40px;
+    padding: 40px 0px 40px 50px;
+    
+    
+    
+}
+
+
+
+
+
+
+.banner-right{
+    
+    /* Relative Absolute ün hareket edeceği sınırlardı */
+    width: 50%;
+    position: relative; /* Bu çereveyi göze alır absolute yapısı */
+}
+/* Responsive Ayarlar */
+@media screen and (max-width:545px) {
+    .banner-left h1{
+        background-color: rgb(255, 250, 250);
+        border-radius: 20px;
+        opacity:0.8;
+        padding: 10px;
+        width:90%;
+    }
+   
+    
+    
+}
+.banner-left h1{
+    font-weight: 800px;
+    font-size: 500px;
+    width: 400px;
+    top: 50px;
+    margin-left: -20px;
+    z-index:2;
+    color: rgb(3, 9, 12);
+    font-size: 32px;
+    background-color: white;
+    border-radius: 18px;
+    opacity:0.8;
+    padding: 10px;
+    
+
+}
+.banner-left-contents{
+    
+    display: flex;
+    gap: 50px;
+    top: 100px;
+    background-color: white;
+    border-radius: 18px;
+    opacity: 0.8;
+   padding-right:1px;
+    
+    margin-left: -15px;
+    z-index: 2;
+}
+.contents:first-child{
+    
+    border-right: 1px solid black ;
+    padding-right: 50px;
+}
+.contents p{
+ font-size: 32px;
+ font-weight: 600px;   
+
+}
+.contents span{
+    font-size:18px ;
+}
+.banner-left-search{
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+    border-radius: 15px;
+    z-index: 5;
+    
+
+}
+.banner-left-search input{
+    width: 80%;
+    border: none;
+    outline: none; /* Focuslandıktan sonraki borderı kadldırır  */
+    width: 80%;
+    font-size: 18px; 
+}
+.banner-left-search i{
+    background-color: rgb(114, 202, 26);
+    padding: 8px 10px;
+    border-radius: 10px;
+
+}
+.banner-right img{
+   
+    position:absolute;
+    /* Absolute relative in sınırlarına göre hareket eder kapsayıcısı relative dir */
+    border-image-repeat: space;
+    bottom: 0;
+   transform:scaleX(-1); /* aynalama görevi görür */
+    
+}
+
+
+/* İmage in arkaplanı */
+.banner-right-bg{
+    position:absolute;
+    background-image:url(/Lucky-plants-for-the-home-woman-watering-her-plant-with-a-smile.jpeg);background-position: center;background-size:cover;
+    object-fit: cover;
+ 
+    width: 340px;
+    height: 330px;
+    bottom: 0px;
+    right: 10%;
+    border-radius: 50% 20% 0px 50%;
+   
+}
+img{
+    width: 330px;
+    object-fit: cover;
+
+}
+.banner-left h1 span{
+    color: chartreuse;
+    
+}
+.product{
+    width: 100%;
+    margin: auto;
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+   
+}
+.product-title{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    gap: 15px;
+    text-align: center;
+    margin-top: 60px;
+   
+  
+   
+   
+}
+.more{
+    background-color:rgb(133, 194, 194);
+    border: none;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+   
+}
+.more:hover{
+    background-color:rgb(133, 194, 194);
+    color:black;
+    transform: scale(1.1);
+    transition: ease 0.5s;
+}
+.product-card{
+    
+    width: 100%;
+    display: flex;
+    margin-left:2px;
+    gap:50px;
+    width: auto;
+    align-items:start;
+    margin-bottom: 50px;
+
+}
+.product-cards{
+    /*CART YAPISI  */
+    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+}
+.product-cards img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+
+}
+.product-cards p{
+    font-size: 22px;
+    font-weight: 600px;
+    margin-top: 10px;
+}
+.product-cards span{
+    font-size: 18px;
+    color: gray;
+}
+/* About */
+.about{
+   
+   display: flex;
+   flex-direction: column;
+   gap:20px ;
+   background-color:rgba(134,126,126,0,276);
+   width: 100%;
+   padding: 20px 0;
+   background-color: rgb(225, 233, 233);
+    
+
+}
+.about-title{
+   
+    text-align: center; /* içindekini ortalar */
+}
+.about-title h1{
+    font-size: 32px;
+}
+.about-title p{
+    font-size: 18px;
+    color: grey;
+
+}
+.about-card{
+    
+    display: flex;
+    align-items: center;
+    
+
+}
+.about-cards{
+   
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+
+}
+
+.about-cards i{
+    font-size: 42px;
+    background-color: rgba(181, 218, 166, 0.63);
+    padding: 20px;
+    border-radius: 100%;
+    margin-bottom: 20px;
+}
+.about-cards p{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+.about-cards span{
+   
+    text-align: center;
+  
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;/*satır sayısı*/
+
+}
+.footer{
+   
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(127, 255, 212, 0.438);
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-left{
+    
+    padding: 20px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-left h1{
+    font-family: 'Indie Flower';
+    
+}
+.footer-right{
+    
+   display: flex;
+   gap: 20px;
+   margin-right:100px;
+   margin-top: -80px;
+   gap: 50px;
+}
+.footer-right ul :nth-child(1){
+    font-weight: bold;
+    
+}
+
+
+.footer-left p{
+   
+    font-size: 18px;
+    color: black;
+}
+.footer-left-social{
+   
+    display: flex;
+    
+    
+    gap: 5px;
+}
+.footer-left-social a{
+   
+    color:rgb(100, 90, 90);
+    padding: 20px;
+    border-radius: 50%;
+    
+
+}
+.footer-left-social a:hover{
+    transform: scale(2.1);
+    transition: 0.3s;
+   
+}
+.footer-left-social i{
+    font-size:xx-large;
+}
+.footer-right ul li{
+    list-style-type: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+.footer-right ul li :nth-child(1){
+    font-weight: 800;
+
+}
+
+
+
+
+
+
+
+    
+
